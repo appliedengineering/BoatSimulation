@@ -7,4 +7,5 @@
 - All units are SI units
 - COG = center of gravity
 - MOI = moment of inertia
+- Be careful to note whether a quaternion is Euler or not, the code makes many conversions
 - more to come . . .
