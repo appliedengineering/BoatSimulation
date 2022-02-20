@@ -44,6 +44,9 @@ public class Body2D
             {
                 dForce.ResolveForce(this);
                 velocity += ForceUtil.GetAccelerationWithMass(dForce.resolvedForce, mass);
+
+                angularVelocity += ForceUtil.GetAccelerationWithMass(dForce.resolvedAngularForce, mass);
+
             }
         }
 

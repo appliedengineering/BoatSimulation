@@ -66,6 +66,10 @@ public class PhysicsEngine : MonoBehaviour
         {
             keyPressed = KeyCode.D;
         }
+        else if (Input.GetKey(KeyCode.Space))
+        {
+            keyPressed = KeyCode.Space;
+        }
         else
         {
             return;
@@ -90,11 +94,7 @@ public class PhysicsEngine : MonoBehaviour
             {
                 if(keyPressed == KeyCode.W)
                 {
-                    // boat.forces.Add(ForceUtil.CreateLinearForce(propellerPosition.position, -boatPosition.right.normalized));
-                    boat.dynamicForces.Add(ForceUtil.CreateRelativeForce(propellerPosition.position, propellerPosition.rotation * Vector3.forward, propellerPosition.rotation));
-                    // testing
-                    DynamicForce force = ForceUtil.CreateRelativeForce(propellerPosition.position, propellerPosition.rotation * Vector3.forward, propellerPosition.rotation);
-                    force.ResolveForce(boat);
+                    boat.forces.Add(ForceUtil.CreateLinearForce(propellerPosition.position, -boatPosition.right.normalized));
 
                     // rb.AddForceAtPosition(-boatPosition.right.normalized * forwardForce, propellerPosition.position);
                 }
@@ -103,6 +103,13 @@ public class PhysicsEngine : MonoBehaviour
                     boat.forces.Add(ForceUtil.CreateLinearForce(propellerPosition.position, boatPosition.right.normalized));
                     // boat.dynamicForces.Add(ForceUtil.CreateRelativeForce(propellerPosition.position, -(propellerPosition.rotation * Vector3.forward), propellerPosition.rotation));
                     // rb.AddForceAtPosition(boatPosition.right.normalized * forwardForce, propellerPosition.position);
+                }
+                else if(keyPressed == KeyCode.Space)
+                {
+                    boat.dynamicForces.Add(ForceUtil.CreateRelativeForce(propellerPosition.position, propellerPosition.rotation * Vector3.forward, propellerPosition.rotation));
+                    // testing
+                    DynamicForce force = ForceUtil.CreateRelativeForce(propellerPosition.position, propellerPosition.rotation * Vector3.forward, propellerPosition.rotation);
+                    force.ResolveForce(boat);
                 }
                 else if (keyPressed == KeyCode.A)
                 {

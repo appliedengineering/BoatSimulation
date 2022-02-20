@@ -36,7 +36,12 @@ public class RelativeForce : DynamicForce
 
         Debug.Log("angle: " + Mathf.Abs(angle) + (isRight ? " right" : " left"));
 
-        resolvedForce = Vector3.right * angle;
+        // angle ranges from 0-1
+        // 0 = straight forward, no torque
+        // 1 = 100% torque
+
+        resolvedAngularForce = Vector3.up * angle;
+        resolvedForce = Vector3.right * (1 - angle);
 
     }
 }
