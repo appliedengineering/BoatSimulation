@@ -53,14 +53,15 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-    <Compile Include="Assets\Scripts\PhysicsEngine\PhysicsEngine.cs" />
     <Compile Include="Assets\Scripts\PhysicsEngine\DataTypes\QuantizedForce.cs" />
-    <Compile Include="Assets\Scripts\PhysicsEngine\DataTypes\ForceUtil.cs" />
+    <Compile Include="Assets\Scripts\PhysicsEngine\DataTypes\ForceTypes\DragForce.cs" />
+    <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\PhysicsEngine\DataTypes\Body2D.cs" />
     <Compile Include="Assets\Scripts\PhysicsEngine\DataTypes\DynamicForce.cs" />
-    <Compile Include="Assets\Scripts\PhysicsEngine\DataTypes\ForceTypes\DragForce.cs" />
+    <Compile Include="Assets\Scripts\PhysicsEngine\DataTypes\ForceUtil.cs" />
     <Compile Include="Assets\Scripts\PhysicsEngine\DataTypes\VectorUtil.cs" />
+    <Compile Include="Assets\Scripts\PhysicsEngine\PhysicsEngine.cs" />
+    <Compile Include="Assets\Scripts\PhysicsEngine\DataTypes\ForceTypes\RelativeForce.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -19,6 +19,11 @@ public class ForceUtil
         return new DragForce();
     }
 
+    public static DynamicForce CreateRelativeForce(Vector3 position, Vector3 directionVector)
+    {
+        return new RelativeForce(position, directionVector);
+    }
+
 
     // FORCES
     public static QuantizedForce GetForceSum(List<QuantizedForce> forces)
