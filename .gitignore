@@ -1,0 +1,8 @@
+Library/PackageCache/
+Library/ShaderCache/
+Library/StateCache/
+Library/TempArtifacts/
+Library/Artifacts/
+Recordings/
+obj/Debug
+Logs/
