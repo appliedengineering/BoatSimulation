@@ -5,4 +5,6 @@
 ## Documentation:
 #### Plenty of documentation is found within the code, but here are some important info:
 - All units are SI units
+- COG = center of gravity
+- MOI = moment of inertia
 - more to come . . .
