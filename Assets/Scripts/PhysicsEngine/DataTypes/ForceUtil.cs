@@ -19,9 +19,9 @@ public class ForceUtil
         return new DragForce();
     }
 
-    public static DynamicForce CreateRelativeForce(Vector3 position, Vector3 directionVector)
+    public static DynamicForce CreateRelativeForce(Vector3 position, Vector3 directionVector, Quaternion forceRotation)
     {
-        return new RelativeForce(position, directionVector);
+        return new RelativeForce(position, directionVector, forceRotation);
     }
 
 

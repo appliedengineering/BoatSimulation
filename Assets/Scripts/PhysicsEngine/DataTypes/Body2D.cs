@@ -9,6 +9,8 @@ public class Body2D
     public Vector3 angularVelocity { get; set; } = Vector3.zero;
     public Vector3 position {get; set;}
     public Quaternion rotation { get; set; }
+    public Vector3 centerOfGravity { get; set; }
+
 
     public float mass { get; set; } = 130;
 

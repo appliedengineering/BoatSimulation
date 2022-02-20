@@ -90,12 +90,18 @@ public class PhysicsEngine : MonoBehaviour
             {
                 if(keyPressed == KeyCode.W)
                 {
-                    boat.forces.Add(ForceUtil.CreateLinearForce(propellerPosition.position, -boatPosition.right.normalized));
+                    // boat.forces.Add(ForceUtil.CreateLinearForce(propellerPosition.position, -boatPosition.right.normalized));
+                    boat.dynamicForces.Add(ForceUtil.CreateRelativeForce(propellerPosition.position, propellerPosition.rotation * Vector3.forward, propellerPosition.rotation));
+                    // testing
+                    DynamicForce force = ForceUtil.CreateRelativeForce(propellerPosition.position, propellerPosition.rotation * Vector3.forward, propellerPosition.rotation);
+                    force.ResolveForce(boat);
+
                     // rb.AddForceAtPosition(-boatPosition.right.normalized * forwardForce, propellerPosition.position);
                 }
                 else if(keyPressed == KeyCode.S)
                 {
                     boat.forces.Add(ForceUtil.CreateLinearForce(propellerPosition.position, boatPosition.right.normalized));
+                    // boat.dynamicForces.Add(ForceUtil.CreateRelativeForce(propellerPosition.position, -(propellerPosition.rotation * Vector3.forward), propellerPosition.rotation));
                     // rb.AddForceAtPosition(boatPosition.right.normalized * forwardForce, propellerPosition.position);
                 }
                 else if (keyPressed == KeyCode.A)
