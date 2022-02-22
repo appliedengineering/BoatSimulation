@@ -33,6 +33,7 @@ public class PhysicsEngine : MonoBehaviour
     public Vector3 boatPositionDisp = Vector3.zero;
     public Quaternion boatRotationDisp = Quaternion.identity;
     public Vector3 boatVelocityDisp = Vector3.zero;
+    public Vector3 boatAngularVelocityDisp = Vector3.zero;
 
     // Start is called before the first frame update
     void Start()
@@ -144,6 +145,7 @@ public class PhysicsEngine : MonoBehaviour
             boatPositionDisp = boat.position;
             boatRotationDisp = boat.rotation;
             boatVelocityDisp = boat.velocity;
+            boatAngularVelocityDisp = boat.angularVelocity;
         }
     }
 

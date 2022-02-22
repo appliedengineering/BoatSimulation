@@ -19,5 +19,6 @@ public class DragForce : DynamicForce
         // simple fake drag
         QuantizedForce forceSum = ForceUtil.GetForceSum(body.forces);
         resolvedForce = - body.velocity;
+        resolvedAngularForce = - body.angularVelocity;
     }
 }
