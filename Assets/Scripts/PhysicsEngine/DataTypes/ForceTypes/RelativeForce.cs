@@ -40,8 +40,10 @@ public class RelativeForce : DynamicForce
         // 0 = straight forward, no torque
         // 1 = 100% torque
 
-        resolvedAngularForce = Vector3.up * angle;
-        resolvedForce = Vector3.right * Mathf.Sqrt(1 - Mathf.Pow(angle, 2));
+        resolvedAngularForce = Vector3.up * angle * directionVector.magnitude;
+        resolvedForce = body.rotation * - Vector3.right * Mathf.Sqrt(1 - Mathf.Pow(angle, 2)) * directionVector.magnitude;
+
+        Debug.Log(resolvedForce);
 
     }
 }

@@ -107,9 +107,9 @@ public class PhysicsEngine : MonoBehaviour
                 }
                 else if(keyPressed == KeyCode.Space)
                 {
-                    boat.dynamicForces.Add(ForceUtil.CreateRelativeForce(propellerPosition.position, propellerPosition.rotation * Vector3.forward, propellerPosition.rotation));
+                    boat.dynamicForces.Add(ForceUtil.CreateRelativeForce(propellerPosition.position, propellerPosition.rotation * - Vector3.forward * 1, propellerPosition.rotation));
                     // testing
-                    DynamicForce force = ForceUtil.CreateRelativeForce(propellerPosition.position, propellerPosition.rotation * Vector3.forward, propellerPosition.rotation);
+                    DynamicForce force = ForceUtil.CreateRelativeForce(propellerPosition.position, propellerPosition.rotation * - Vector3.forward * 1, propellerPosition.rotation);
                     force.ResolveForce(boat);
                 }
                 else if (keyPressed == KeyCode.A)
